@@ -286,7 +286,7 @@ if __name__ == '__main__':
                       ); Arg = parser.parse_args()
 
     Config   = ConfigParser.ConfigParser()
-    Config.read("./config.ini")
+    Config.read(Arg.config)
 
     dbCursor = MySQLdb.connect(
                    host     = str(Config.get("DATABASE", "HOST")),
